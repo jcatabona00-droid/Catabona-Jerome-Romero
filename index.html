@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>MY PORTFOLIO</h1>
+    <p>Junior Programmer | Information Technology Student</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#personal">Personal Information</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#java">Java Code</a>
+</nav>
+
+<section id="home">
+    <h2>Welcome to My Portfolio!</h2>
+    <img src="images/profile.jpg" alt="My Profile" class="profile">
+    <h3>Hello, I'm [Jerome R. Catabona]</h3>
+    <p>
+        I am an Information Technology student who is
+        interested in programming and technology.
+        I am always willing to learn new skills and
+        improve my knowledge in the IT field.
+    </p>
+</section>
+
+<section id="personal">
+    <h2>Personal Information</h2>
+    <p><b>Name:</b> [Jerome R. Catabona]</p>
+    <p><b>Age:</b> [18]</p>
+    <p><b>Address:</b> [Macatcatuit]</p>
+    <p><b>Email:</b> [jcatabona00gmail.coml]</p>
+    <p><b>Contact Number:</b> [09753081657]</p>
+    <h3>About Me</h3>
+    <p>
+        I am a simple and hardworking person who
+        wants to develop my skills and knowledge.
+        My goal is to become a successful IT
+        professional and build a better future.
+    </p>
+</section>
+
+<section id="education">
+    <h2>Educational Background</h2>
+
+    <div class="card">
+        <h3>College</h3>
+        <p>Bachelor of Science in Information Technology</p>
+        <p>[Our Lady of the SAcred Heart College of Guimba,inc.]</p>
+        <p>2026 - Present</p>
+    </div>
+
+    <div class="card">
+        <h3>Senior High School</h3>
+        <p>[Macatcatuit High Scool]</p>
+    </div>
+
+    <div class="card">
+        <h3>Junior High School</h3>
+        <p>[Macatcatuit High Scool]</p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+
+    <div class="card">
+        <h3>Technical Skills</h3>
+        <ul>
+            <li>Basic HTML</li>
+            <li>Basic CSS</li>
+            <li>Java Programming</li>
+            <li>Computer Troubleshooting</li>
+            <li>Microsoft Office</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Personal Skills</h3>
+        <ul>
+            <li>Communication</li>
+            <li>Teamwork</li>
+            <li>Problem Solving</li>
+            <li>Time Management</li>
+            <li>Willingness to Learn</li>
+        </ul>
+    </div>
+</section>
+
+<section id="java">
+    <h2>My Java Program</h2>
+    <p>
+       import java.util.Scanner;
+
+public class BatteryLevelAnalyzer {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int[] battery = new int[15];
+        int sum = 0;
+        int highest = 0;
+        int lowest = 100;
+        int lowBatteryCount = 0;
+
+        // Input battery levels
+        for (int i = 0; i < battery.length; i++) {
+            System.out.print("Enter battery level for device "
+                    + i + " (0-100): ");
+            int level = input.nextInt();
+
+            while (level < 0 || level > 100) {
+                System.out.println("Invalid input! Enter 0 to 100.");
+                System.out.print("Enter battery level for device "
+                        + i + " (0-100): ");
+                level = input.nextInt();
+            }
+
+            battery[i] = level;
+            sum += battery[i];
+
+            if (battery[i] > highest) {
+                highest = battery[i];
+            }
+
+            if (battery[i] < lowest) {
+                lowest = battery[i];
+            }
+
+            if (battery[i] < 20) {
+                lowBatteryCount++;
+            }
+        }
+
+    </p>
+
+    <h3>Game Source Code</h3>
+
+    
+    </code></pre>
+</section>
+
+<footer>
+    <p>© 2026 My Personal Portfolio</p>
+    <p>Created by [Jerome] | BS Information Technology</p>
+</footer>
+
+</body>
+</html>
